@@ -14,7 +14,7 @@ export default function InventoryPage() {
             id: 2,
             item: "Widget B",
             location: "Warehouse 2",
-            quantity: 30,
+            quantity: 40,
             reorderPoint: 30,
             reorderQty: 50,
             updatedAt: "2026-04-18",
