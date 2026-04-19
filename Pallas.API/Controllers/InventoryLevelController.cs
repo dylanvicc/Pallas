@@ -43,9 +43,9 @@ namespace Pallas.API.Controllers
 
                 return CreatedAtAction(nameof(GetInventoryLevel), new { id = created.Id }, MapToResponse(created));
             }
-            catch (InvalidOperationException ex)
+            catch (InvalidOperationException exception)
             {
-                return Conflict(ex.Message);
+                return Conflict(exception.Message);
             }
         }
 
