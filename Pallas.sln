@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pallas.API", "Pallas.API\Pa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pallas.Test", "Pallas.Test\Pallas.Test.csproj", "{B427FE0A-B47E-43CB-BF79-9D36943C8284}"
 EndProject
+Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "Pallas.Web", "Pallas.Web\Pallas.Web.esproj", "{06A00BF1-0E68-0A62-7D55-19EFBFAF76F2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,12 @@ Global
 		{B427FE0A-B47E-43CB-BF79-9D36943C8284}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B427FE0A-B47E-43CB-BF79-9D36943C8284}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B427FE0A-B47E-43CB-BF79-9D36943C8284}.Release|Any CPU.Build.0 = Release|Any CPU
+		{06A00BF1-0E68-0A62-7D55-19EFBFAF76F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{06A00BF1-0E68-0A62-7D55-19EFBFAF76F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{06A00BF1-0E68-0A62-7D55-19EFBFAF76F2}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{06A00BF1-0E68-0A62-7D55-19EFBFAF76F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{06A00BF1-0E68-0A62-7D55-19EFBFAF76F2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{06A00BF1-0E68-0A62-7D55-19EFBFAF76F2}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
