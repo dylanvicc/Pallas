@@ -24,7 +24,7 @@ namespace Pallas.API.Controllers
             var user = await users.GetUserByUsernameAsync(request.Username);
 
             if (user == null)
-                return NotFound();
+                return Unauthorized("Invalid username or password.");
 
             if (hasher.Verify(request.Password, user.Password))
             {
