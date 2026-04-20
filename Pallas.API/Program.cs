@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
@@ -29,6 +30,17 @@ builder.Services.AddControllers()
     {
         options.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter());
     });
+
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("Cors_Policy", policy =>
+    {
+        policy.WithOrigins("http://localhost:55606")
+              .AllowAnyHeader()
+              .AllowAnyMethod()
+              .AllowCredentials();
+    });
+});
 
 builder.Services.AddEndpointsApiExplorer();
 
@@ -110,6 +122,7 @@ app.UseExceptionHandler(options =>
     });
 });
 
+app.UseCors("Cors_Policy");
 app.UseHttpsRedirection();
 app.UseAuthentication();
 app.UseAuthorization();

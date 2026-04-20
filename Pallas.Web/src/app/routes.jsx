@@ -1,5 +1,7 @@
 import LoginPage from "../features/login/LoginPage";
 import InventoryPage from "../features/inventory/InventoryPage";
+import ItemPage from "../features/item/ItemPage";
+import LocationPage from "../features/location/LocationPage";
 
 export default function Routes() {
 
@@ -7,10 +9,10 @@ export default function Routes() {
 
     if (path === "/login") return <LoginPage />;
     if (path === "/inventory") return <InventoryPage />;
+    if (path === "/item") return <ItemPage />;
+    if (path === "/location") return <LocationPage />;
 
     return (
-        <div>
-            <h2 className="text-3xl font-bold mb-4">Pallas Inventory Management System</h2>
-        </div>
+        <div></div>
     );
 }
