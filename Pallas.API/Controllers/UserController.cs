@@ -52,10 +52,10 @@ namespace Pallas.API.Controllers
                 return BadRequest(ModelState);
 
             if (await users.GetUserByEmailAsync(request.Email) != null)
-                return Conflict("Email already in use.");
+                return Conflict("This email already in use.");
 
             if (await users.GetUserByUsernameAsync(request.Username) != null)
-                return Conflict("Username already in use.");
+                return Conflict("This username already in use.");
 
             var created = await users.CreateUserAsync(request);
 

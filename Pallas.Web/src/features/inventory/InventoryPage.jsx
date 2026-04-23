@@ -26,7 +26,7 @@ export default function InventoryPage() {
     return (
         <ProtectedRoute>
             <div className="max-w-6xl mx-auto">
-                <h2 className="text-2xl font-semibold mb-6">Inventory</h2>
+                <h2 className="text-2xl font-semibold mb-6">Inventory Overview</h2>
 
                 <div className="overflow-x-auto border border-gray-700 rounded-xl">
                     <table className="w-full text-left text-sm bg-gray-800">
