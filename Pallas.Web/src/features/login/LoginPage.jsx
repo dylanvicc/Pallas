@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useAuthentication } from "./AuthenticationContext";
-import { api } from "../../lib/api";
+import { authService } from "../../services/authService";
 
 export default function LoginPage() {
 
@@ -11,24 +11,17 @@ export default function LoginPage() {
     const [error, setError] = useState("");
 
     const submit = async (event) => {
-
         event.preventDefault();
         setError("");
 
-        const res = await api("/api/authenticate/token", {
-            method: "POST",
-            body: JSON.stringify({ username, password })
-        });
+        try {
+            const data = await authService.login(username, password);
+            login(data.token);
 
-        if (!res.ok) {
+            window.location.href = "/inventory";
+        } catch {
             setError("Invalid username or password");
-            return;
         }
-
-        const data = await res.json();
-        login(data.token);
-
-        window.location.href = "/inventory";
     };
 
     return (
