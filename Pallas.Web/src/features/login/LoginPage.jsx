@@ -34,6 +34,21 @@ export default function LoginPage() {
     return (
         <div className="flex items-center justify-center min-h-[70vh]">
             <div className="w-full max-w-md bg-gray-800 p-8 rounded-xl shadow border border-gray-700">
+
+                <div className="flex justify-center mb-6 gap-4 flex-wrap">
+                    <div className="w-10 h-10">
+                        <svg viewBox="0 0 40 40" fill="none">
+                            <rect width="40" height="40" rx="8" fill="#0f172a" />
+                            <rect x="8" y="8" width="6" height="6" fill="#94a3b8" />
+                            <rect x="16" y="8" width="6" height="6" fill="#94a3b8" />
+                            <rect x="24" y="8" width="6" height="6" fill="#6366f1" />
+                            <rect x="8" y="16" width="6" height="6" fill="#94a3b8" />
+                            <rect x="16" y="16" width="6" height="6" fill="#6366f1" />
+                            <rect x="8" y="24" width="6" height="6" fill="#94a3b8" />
+                        </svg>
+                    </div>
+                </div>
+
                 <h2 className="text-2xl font-bold mb-6 text-center">Welcome Back</h2>
 
                 <form onSubmit={submit} className="space-y-5">
@@ -63,10 +78,18 @@ export default function LoginPage() {
 
                     <button
                         type="submit"
-                        className="w-full bg-blue-600 text-white py-2 mt-4 rounded-lg font-medium hover:bg-blue-700 transition"
+                        className="w-full bg-blue-600 text-white py-2.5 rounded-lg font-medium hover:bg-blue-700 transition active:scale-[0.99]"
                     >
                         Sign In
                     </button>
+                    <p className="text-center text-sm text-gray-400">
+                        <a
+                            href="/forgot-password"
+                            className="hover:text-gray-200 underline underline-offset-2"
+                        >
+                            Forgot your password?
+                        </a>
+                    </p>
                 </form>
             </div>
         </div>
