@@ -15,8 +15,8 @@ namespace Pallas.API.Controllers
         IJWTAuthenticationService authenticator,
         IPasswordHashService hasher) : ControllerBase
     {
-        [HttpPost("token")]
-        public async Task<IActionResult> Authenticate([FromBody] AuthenticationRequest request)
+        [HttpPost("login")]
+        public async Task<IActionResult> Login([FromBody] AuthenticationRequest request)
         {
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
